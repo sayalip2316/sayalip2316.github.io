@@ -18,7 +18,7 @@ body{
   background-size: cover;
   background-position: center;
 }
-#myname{
+#home{
     font-size: 50px;
     color:#fff;
 }
@@ -155,7 +155,7 @@ width: 50%;
     color: #b54769;
 }
 /* services */
-#services{
+#skills{
     padding: 30px 0;
 }
 .services-list{
@@ -193,7 +193,7 @@ width: 50%;
     transform: translateY(-10px);
 }
 /* portfolio */
-#portfolio{
+#projects{
     padding: 50px 0;
 
 }
@@ -394,6 +394,9 @@ nav .fa-solid{
     width: 80%;
     column-gap: 10px;
     margin-top: 25px;
+  }
+  .navbar-brand{
+text-decoration: none;
   }
 @media only screen and (max-width: 600px) {
     #nav-menu{
