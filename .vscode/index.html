@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayali || Full Stack Developer</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- FavIcon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+ 
+</head>
+<body>
+    <!-- Navbar -->
+    <navbar id="nav-menu">
+        <a href="#" class="logo">WELCOME</a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+ 
+        <ul class="navbar">
+            <li><a href="#home" class="nav-link home">Home</a></li>
+            <li><a href="#about" class="nav-link about">About</a></li>
+            <li><a href="#skills" class="nav-link skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link contact">Contact</a></li>
+            <li><a class="nav-link resume" id="resume-button-1" href="./Sayali-Jadhav-Resume (2).pdf" onclick="openResume()" download>Resume <span id="resume1"><i class="bx bx-download"></i></span></a></li>
+            <div class="bx bx-moon" id="lightmode"></div>
+        </ul>
+    </navbar>
+    <!-- Home -->
+ 
+    <section class="home-section" id="home">
+        <div class="social">
+        </div>
+        <div class="home-image">
+            <img class="home-img" src="./images/profile.png" alt="">
+        </div>
+        <div class="home-text">
+            <span>Hello, I'm</span>
+            <h1 id="user-detail-name">Sayali Jadhavr</h1>
+            <h2>Full Stack Web Developer</h2>
+            <p>I craft user-friendly web applications from start to finish, ensuring seamless functionality and smooth user experience.</p>
+            <!-- <a href="#contact" class="btn">Contact Me</a> -->
+        </div>
+ 
+    </section>
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="heading">
+            <h2>About Me</h2><br>
+            <!-- <span>Introduction</span> -->
+        </div>
+        <!-- About Content -->
+        <div class="about-container">
+            <!-- <div class="about-img">
+                <img src="121.jpg" alt="">
+            </div> -->
+            <div class="about-text">
+                <p id="user-detail-intro">Passionate Full Stack Web Developer with strong
+                    designs and problem-solving skills. A highly disciplined
+                    and motivated person. Proficient in both front-end and
+                    back-end technologies like HTML, CSS, JavaScript,
+                    Node, Express.js, and MongoDB. Looking forward to
+                    launching a career as a Full Stack Web Developer.</p>
+                <div class="information">
+                    <!-- Box 1 -->
+                    <div class="info-box">
+                        <i class='bx bxl-github'></i>
+                        <a id="contact-github" href="https://github.com/sayalip2316" target="_blank"><span>sayalip2316</span></a>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="info-box">
+                        <i class='bx bxl-linkedin-square'></i>
+                        <a id="contact-linkedin" href="https://www.linkedin.com/in/sayali-jadhav-13b84025b/" target="_blank"><span>sayali jadhav</span></a>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="info-box">
+                        <i class='bx bxs-envelope'></i>
+                        <a id="contact-email" href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><span>jadhavsayalip2316@gmail.com</span></a>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="info-box">
+                        <i class='bx bx-phone'></i>
+                        <a id="contact-phone"><span>9067239313</span></a>
+                    </div>
+                </div>
+                <a class="btn" class= "nav-link resume" onclick="openResume()"  id="resume-button-2" href="./Sayali-Jadhav-Resume (2).pdf" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section class="skills-section" id="skills">
+        <div class="heading">
+            <h2>Skills</h2>
+        </div>
+        <!-- Skills Content -->
+        <div class="skills-container">
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/html-icon.png" alt="HTML">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/css-icon.png" alt="CSS">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/js-icon.png" alt="JS">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/node-kjs.webp" alt="Node">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/mongo-icon.png" alt="MongoDB">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/express-logo (2).png" alt="Express">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/git-icon.png" alt="git">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/postman-icon-removebg-preview.png" alt="postman">
+                <p class="skills-card-name"></p>
+            </div>
+            <div class="skills-card">
+                <img class="skills-card-img" src="./images/vs-code-logo.png" alt="postman">
+                <p class="skills-card-name"></p>
+            </div>
+        </div>
+ 
+    </section>
+
+    <!-- GITHUB STATS -->
+    <section>
+        <div class="heading">
+            <h2>Github Stats</h2>
+        </div><br><br>
+       <div id="github1">
+        <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=sayalip2316" alt="">
+        </div><br>
+        <div id="github2">
+        <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sayalip2316" alt="">
+        <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=sayalip2316" alt="">
+       </div><br>
+        <div class="react-activity-calendar">
+            <!-- Loading stuff -->
+            <!-- Loading the data just for you. -->
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <section class="services" id="projects">
+        <div class="heading">
+            <h2>Projects</h2>
+        </div><br>
+        <div class="portfolio">
+            <div class="project-card">
+              <div class="project-details">
+                <h2 class="project-title">Bass Pro Shop</h2>
+                <img src="./images/Picture1.png" alt="Project 1">
+                <div class="project-tech-stack">
+                    <img src="./images/html-icon1.png" alt="HTML">
+                    <img src="./images/css-icon1.png" alt="CSS">
+                    <img src="./images/js-icon.png" alt="JS">
+                    <img src="./images/node-kjs.webp" alt="Node">
+                    <img src="./images/express-logo (2).png" alt="Express">
+                    <img src="./images/mongo-icon.png" alt="Mongo">
+                </div>
+                <p class="project-description">Bass Pro Shop is a popular outdoor retail store known for its wide selection of fishing, hunting, and camping gear.</p>
+                <div class="links">
+                  <a class="project-github-link" href="https://github.com/sayalip2316/able-harmony-1862" target="_blank">
+                    <i class="bx bxl-github"></i> GitHub</a>
+                  <a class="project-deployed-link" href="sweet-bonbon-4ff6c3.netlify.app/" target="_blank">
+                    <i class='bx bx-link-external'></i> Deployed</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="project-card">
+              <div class="project-details">
+                <h2 class="project-title">Pepperfry</h2>
+                <img src="/images/pepperfry3.png" alt="Project 2">
+                <div class="project-tech-stack">
+                    <img src="./images/html-icon1.png" alt="HTML">
+                    <img src="./images/css-icon1.png" alt="CSS">
+                    <img src="./images/js-icon.png" alt="JS">
+                </div>
+                <p class="project-description">Pepperfry is an Indian online marketplace for furniture and home décor. The
+                    company is headquartered in Mumbai, Maharashtra. This was a <b>group</b> project build in the span of 5 days.</p>
+                <div class="links">
+                  <a class="project-github-link" href="https://github.com/sayalip2316/nosy-tree-9718-" target="_blank">
+                    <i class="bx bxl-github"></i> GitHub</a>
+                  <a class="project-deployed-link" href="gorgeous-souffle-1a17e4.netlify.app/" target="_blank">
+                    <i class='bx bx-link-external'></i> Deployed</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="project-card">
+              <div class="project-details">
+                <h2 class="project-title">Smart App</h2>
+                <img src="./images/Picture2.png" alt="Project 3">
+                <div class="project-tech-stack">
+                    <img src="./images/html-icon1.png" alt="HTML">
+                    <img src="./images/css-icon1.png" alt="CSS">
+                    <img src="./images/js-icon.png" alt="JS">
+                </div>
+                <p class="project-description">Amazon is online retailer, manufacturer of electronic book readers, and Web services provider.</p>
+                <div class="links">
+                  <a class="project-github-link" href="https://github.com/sayalip2316/skillful-look-5651" target="_blank">
+                    <i class="bx bxl-github"></i>GitHub</a>
+                  <a class="project-deployed-link" href="papaya-chaja-b0a8ee.netlify.app/" target="_blank">
+                    <i class='bx bx-link-external'></i>Deployed</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-details">
+                  <h2 class="project-title">VLink</h2>
+                  <img src="./images/vLink.png" alt="Project 3">
+                  <div class="project-tech-stack">
+                    <img src="./images/html-icon1.png" alt="HTML">
+                    <img src="./images/css-icon1.png" alt="CSS">
+                    <img src="./images/js-icon.png" alt="JS">
+                </div>
+                  <p class="project-description">VLink is a communications platform that allows users to connect with video, audio, screen share, and chat. The power of collaboration is that it can turn a group of individuals into a team empowered to achieve great things Vlink is a type of application that enables users to share their computer screens with others in real-time over the internet.</p>
+                  <div class="links">
+                    <a class="project-github-link" href="https://github.com/sayalip2316/VLink" target="_blank">
+                      <i class="bx bxl-github"></i>GitHub</a>
+                    <a class="project-deployed-link" href="vlink-app.netlify.app" target="_blank">
+                      <i class='bx bx-link-external'></i>Deployed</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <div class="project-card">
+                <div class="project-details">
+                  <h2 class="project-title">American Eagle Clone</h2>
+                  <img src="./images/Project3.png" alt="Project 3">
+                  <div class="project-tech-stack">
+                    <img src="./images/html-icon1.png" alt="HTML">
+                    <img src="./images/css-icon1.png" alt="CSS">
+                    <img src="./images/js-icon.png" alt="JS">
+                </div>
+                  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+                  <div class="links">
+                    <a class="project-github-link" href="https://github.com/Dharamveer9457/standing-gun-8725" target="_blank">
+                      <i class="bx bxl-github"></i>GitHub</a>
+                    <a class="project-deployed-link" href="https://standing-gun-8725.netlify.app/" target="_blank">
+                      <i class='bx bx-link-external'></i>Deployed</a>
+                  </div>
+                </div>
+              </div> -->
+          </div>
+          
+          
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="heading">
+            <h2>Contact</h2>
+            <span>Connect With Us</span>
+        </div>
+        <div class="contact-form">
+            <form action="">
+                <input type="text" placeholder="Your Name">
+                <input type="email" name="" id="" placeholder="Your Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+                <input type="button" value="Send" class="contact-button">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <div class="footer">
+        <h2>Coding Home</h2>
+        <div class="footer-social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+ 
+    </div> -->
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>Created By <a href="">Sayali</a> | All Right Reserved 2023.</p>
+    </div>
+ 
+ 
+ 
+    <!-- Link To JS -->
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+<script>
+    GitHubCalendar(".react-activity-calendar", "sayalip2316");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".react-activity-calendar", "sayalip2316", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".react-activity-calendar", "sayalip2316", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${username}`)
+       }
+    }).then(r => r.text())
+
+    function openResume(){
+        window.open("Sayali-Jadhav-Resume (2).pdf", "_blank")
+    }
+
+    
+</script>
+</body>
+</html>
