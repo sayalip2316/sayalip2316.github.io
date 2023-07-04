@@ -14,7 +14,7 @@
   --main-color: #fff;
   --bg-color: #080808;
   --text-color: #ffffff;
-  --hover: hsl(260, 100%, 51%);
+  --hover: #ff004f;
  
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
@@ -431,6 +431,15 @@ form textarea {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-left: 35%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+}
+#msg{
+  display: block;
+  /* margin-top:-40px; */
+  color:#61b752
+  
 }
 .contact-button:hover {
   background: var(--hover);

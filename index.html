@@ -273,18 +273,19 @@
     <section class="contact-section" id="contact">
         <div class="heading">
             <h2>Contact</h2>
-            <span>Connect With Us</span>
+            <!-- <span>Connect With Us</span> -->
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                <input type="button" value="Send" class="contact-button">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="contact-button">Submit</button>
             </form>
+            <span id="msg"></span>
         </div>
     </section>
-
+    <!-- <input type="button" value="Send" class="contact-button"> -->
     <!-- Footer -->
     <!-- <div class="footer">
         <h2>Coding Home</h2>
@@ -327,5 +328,23 @@
 
     
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyYzLMaqaXypQO16ynvVI4S7vsCXFfVKbOkIpIMyZPmW45Jk3J0ZaR_SCf_T1rFaL_U5Q/exec'
+    const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML="";
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
