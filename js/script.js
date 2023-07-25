@@ -17,18 +17,33 @@
 
 
  // Light Mode
- let lightmode = document.querySelector("#lightmode")
+//  let lightmode = document.querySelector("#lightmode")
 
- lightmode.onclick = ()=>{
-     if(lightmode.classList.contains("bx-sun")){
-         lightmode.classList.replace('bx-sun','bx-moon');
-          document.body.classList.remove('active');
-     }else{
-         lightmode.classList.replace('bx-moon','bx-sun');
-         document.body.classList.add('active');
-     }
- }
+//  lightmode.onclick = ()=>{
+//      if(lightmode.classList.contains("bx-sun")){
+//          lightmode.classList.replace('bx-sun','bx-moon');
+//           document.body.classList.remove('active');
+//      }else{
+//          lightmode.classList.replace('bx-moon','bx-sun');
+//          document.body.classList.add('active');
+//      }
+//  }
 
+ function toggleDarkMode() {
+    const darkModeStyle = document.getElementById('dark-mode-style');
+    const themeStyle = document.getElementById('theme-style');
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    if (darkModeStyle.disabled) {
+        darkModeStyle.disabled = false;
+        themeStyle.disabled = true;
+        darkModeToggle.innerHTML = '<i class="bx bx-sun"></i> Bright Mode';
+    } else {
+        darkModeStyle.disabled = true;
+        themeStyle.disabled = false;
+        darkModeToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
+    }
+}
 
  
 Cypress.on('uncaught:exception', (err, runnable) => {

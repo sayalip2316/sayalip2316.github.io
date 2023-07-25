@@ -397,6 +397,7 @@ span {
   transform: scale(1.1);
   transition: 1s;
 }
+
 .contact-form {
   display: grid;
   place-items: center;
@@ -474,12 +475,12 @@ form textarea {
 }
 .copyright {
   padding: 20px;
-  background: var(--main-color);
+  background: black;
   text-align: center;
-  color: #000000;
+  color: white;
 }
 .copyright a{
-  color: #000000;
+  color: white;
 }
 /* Making Responsive */
 @media (max-width: 991px) {
