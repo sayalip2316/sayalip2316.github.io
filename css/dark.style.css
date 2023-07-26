@@ -67,7 +67,7 @@ nav.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
 .logo {
-  font-size: 2.61rem;
+  font-size: 2rem;
   font-weight: 600;
   color: white;
 }
@@ -98,12 +98,54 @@ nav.shadow {
 }
 
 #menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10001;
   display: none;
-  border: 1px solid yellow;
+  cursor: pointer;
 }
+
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  margin: 6px 0;
+}
+
+/* Media query for responsive navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #f9f9f9;
+      width: 100%;
+  }
+
+  .navbar li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .navbar li a {
+      padding: 10px;
+  }
+
+  /* Show the navbar when menu icon is clicked */
+  #menu-icon.active + .navbar {
+      display: flex;
+  }
+  #menu-icon {
+      display: block;
+  }
+}
+
 
 #lightmode {
   font-size: 22px;
@@ -200,8 +242,10 @@ nav.shadow {
   display: flex;
   align-items: center;
   margin-bottom: 1.4rem;
+  text-align: center;
   margin-left: 35%;
 }
+
 .information .info-box .bx {
   font-size: 22px;
 }
@@ -332,7 +376,7 @@ span {
 #github1>img{
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: 620px;
+  width: 100%;
 }
 
 #github2{
@@ -496,8 +540,44 @@ form textarea {
     --big-font: 2.7rem;
     --medium-font: 1.4rem;
   }
+  #github1{
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* border:5px solid red; */
+    
+  }
+  
+#github1>img{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+}
+#github2{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#github2>img{
+  width: 50%; 
+  border-radius: 5px;
+  height: 160px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#github2>img:nth-child(2){
+  margin-left: 8px;
+}
+
 }
 @media (max-width: 768px) {
+ 
   :root {
     --big-font: 2.4rem;
     --medium-font: 1.2rem;
@@ -546,6 +626,7 @@ form textarea {
   }
   .home-image {
     order: initial;
+    margin-top: 27px;
   }
   .about-container {
     grid-template-columns: 1fr;
@@ -570,6 +651,13 @@ form textarea {
   }
   .contact-button{
     margin-left: 25%;
+  }
+  .information .info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    text-align: center;
+    /* margin-left: 35%; */
   }
 }
 @media (max-width: 340px) {
@@ -596,6 +684,15 @@ form textarea {
   .contact-button{
     margin-left: 25%;
   }
+  
+/* .portfolio {
+ 
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  
+} */
+
+
 }
 
 
@@ -603,9 +700,9 @@ form textarea {
 /*------------------------------PROJECTS------------------------------ */
 
 .portfolio {
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(3,1fr);
 }
@@ -683,4 +780,22 @@ padding: 5px;
 
 .project-tech-stack>img:nth-child(1), .project-tech-stack img:nth-child(2){
   width: 35px;
+}
+/* Media query for responsive project cards on mobile screens */
+@media screen and (max-width: 768px) {
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr); /* Display one card per row on mobile */
+  }
+
+  .project-card img {
+    max-width: 100%; /* Adjust image width to fit the mobile screen */
+  }
+
+  .project-tech-stack {
+    width: 100%; /* Adjust tech stack container width on mobile */
+  }
+
+  .project-tech-stack img {
+    width: 30px; /* Adjust tech stack image size on mobile */
+  }
 }

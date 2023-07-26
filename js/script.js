@@ -28,6 +28,9 @@
 //          document.body.classList.add('active');
 //      }
 //  }
+document.getElementById("menu-icon").addEventListener("click", function () {
+    this.classList.toggle("active");
+});
 
  function toggleDarkMode() {
     const darkModeStyle = document.getElementById('dark-mode-style');

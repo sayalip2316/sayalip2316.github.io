@@ -11,9 +11,9 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --main-color: #fff;
-  --bg-color: #fff;
-  --text-color: #080808;
+  --main-color: black;
+  --bg-color: white;
+  --text-color: black;
   --hover: #ff004f;
  
   --big-font: 3.2rem;
@@ -24,8 +24,8 @@ section {
   padding: 50px 10%;
 }
 body.active {
-  --text-color: #ffffff;
-  --bg-color: #0f0c27;
+  --text-color: #0f0c27;
+  --bg-color: #ffffff;
 }
 body {
   background: var(--bg-color);
@@ -67,7 +67,7 @@ nav.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
 .logo {
-  font-size: 2.61rem;
+  font-size: 2rem;
   font-weight: 600;
   color: Black;
 }
@@ -98,12 +98,59 @@ nav.shadow {
 }
 
 #menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10001;
   display: none;
-  border: 1px solid yellow;
+  cursor: pointer;
 }
+
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+}
+.information .info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  margin-left: 35%;
+}
+/* Media query for responsive navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #f9f9f9;
+      width: 100%;
+  }
+
+  .navbar li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .navbar li a {
+      padding: 10px;
+  }
+
+  /* Show the navbar when menu icon is clicked */
+  #menu-icon.active + .navbar {
+      display: flex;
+  }
+  #menu-icon {
+      display: block;
+  }
+}
+
 
 #lightmode {
   font-size: 22px;
@@ -157,14 +204,14 @@ nav.shadow {
   display: inline-block;
   /* background: var(--text-color); */
   border: 1px solid #ff004f;
-  color: Black;
+  color: black;
   padding: 0.7rem 1.3rem;
   border-radius: 0.5rem;
 }
 .btn:hover {
   /* background: var(--hover); */
   background-color: #ff004f;
-  color: Black;
+  color: black;
   border: 1px solid #ff004f;
 }
  
@@ -200,7 +247,7 @@ nav.shadow {
   display: flex;
   align-items: center;
   margin-bottom: 1.4rem;
-  margin-left: 35%;
+  /* margin-left: 35%; */
 }
 .information .info-box .bx {
   font-size: 22px;
@@ -219,7 +266,7 @@ nav.shadow {
   height: 40px;
   width: 15%;
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid black ;
   border-radius: 5px;
 }
 
@@ -317,7 +364,6 @@ span {
 .react-activity-calendar{
   width: 70%;
   color: black;
-  margin: auto;
 }
 
 #github1{
@@ -332,7 +378,7 @@ span {
 #github1>img{
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: 620px;
+  width: 100%;
 }
 
 #github2{
@@ -377,7 +423,7 @@ span {
   font-weight: 500;
 }
 .services-box:hover a{
-  color: #8b8a8f;
+  color: black;
 }
 .portfolio-content {
   display: grid;
@@ -397,6 +443,7 @@ span {
   transform: scale(1.1);
   transition: 1s;
 }
+
 .contact-form {
   display: grid;
   place-items: center;
@@ -415,7 +462,7 @@ textarea {
   border: none;
   outline: none;
   background: gray;
-  color: #ababab;
+  color: black;
   margin-bottom: 1rem;
   color: var(--text-color);
 }
@@ -431,7 +478,7 @@ form textarea {
   width: 160px;
   cursor: pointer;
   border: 1px solid #ff004f;
-  color: Black;
+  color: black;
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -455,7 +502,7 @@ form textarea {
   place-items: center;
   padding: 20px;
   background: #ebebeb;
-  color: #000;
+  color: white;
 }
 .footer h2 {
   font-size: 1.5rem;
@@ -467,19 +514,19 @@ form textarea {
   margin-left: 10px;
   text-align: center;
   line-height: 40px;
-  background-color: Black;
+  background-color: #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 .copyright {
   padding: 20px;
-  background: var(--main-color);
+  background: white;
   text-align: center;
-  color: #000000;
+  color: black;
 }
 .copyright a{
-  color: #000000;
+  color: black;
 }
 /* Making Responsive */
 @media (max-width: 991px) {
@@ -495,8 +542,44 @@ form textarea {
     --big-font: 2.7rem;
     --medium-font: 1.4rem;
   }
+  #github1{
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* border:5px solid red; */
+    
+  }
+  
+#github1>img{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+}
+#github2{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#github2>img{
+  width: 50%; 
+  border-radius: 5px;
+  height: 160px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#github2>img:nth-child(2){
+  margin-left: 8px;
+}
+
 }
 @media (max-width: 768px) {
+ 
   :root {
     --big-font: 2.4rem;
     --medium-font: 1.2rem;
@@ -545,6 +628,7 @@ form textarea {
   }
   .home-image {
     order: initial;
+    margin-top: 27px;
   }
   .about-container {
     grid-template-columns: 1fr;
@@ -595,6 +679,14 @@ form textarea {
   .contact-button{
     margin-left: 25%;
   }
+  
+/* .portfolio {
+ 
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  
+} */
+
 }
 
 
@@ -602,9 +694,9 @@ form textarea {
 /*------------------------------PROJECTS------------------------------ */
 
 .portfolio {
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(3,1fr);
 }
@@ -683,14 +775,21 @@ padding: 5px;
 .project-tech-stack>img:nth-child(1), .project-tech-stack img:nth-child(2){
   width: 35px;
 }
-/* #dark-mode-toggle{
-    font-size: 1rem;
-    padding: 10px 20px;
-    color: var(--text-color);
-    font-weight: 500;
-    border: none;
-    background-color: white;
+/* Media query for responsive project cards on mobile screens */
+@media screen and (max-width: 768px) {
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr); /* Display one card per row on mobile */
+  }
+
+  .project-card img {
+    max-width: 100%; /* Adjust image width to fit the mobile screen */
+  }
+
+  .project-tech-stack {
+    width: 100%; /* Adjust tech stack container width on mobile */
+  }
+
+  .project-tech-stack img {
+    width: 30px; /* Adjust tech stack image size on mobile */
+  }
 }
-#dark-mode-toggle:hover{
-    color: var(--hover);
-} */
