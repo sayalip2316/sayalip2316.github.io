@@ -115,7 +115,19 @@ nav.shadow {
   background-color: #000;
   margin: 6px 0;
 }
-
+#dark-mode-toggle{
+  background-color: black;
+  border: 2px solid black;
+}
+#dark-mode-toggle i{
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color:white;
+}
+#dark-mode-toggle i:hover{
+  color: var(--hover);
+}
 /* Media query for responsive navbar */
 @media screen and (max-width: 768px) {
   .navbar {
@@ -238,7 +250,7 @@ nav.shadow {
   margin: 1rem 0 1.4rem;
   
 }
-.information .info-box {
+/* .information .info-box {
   display: flex;
   align-items: center;
   margin-bottom: 1.4rem;
@@ -252,6 +264,23 @@ nav.shadow {
 .information .info-box span {
   font-weight: 400;
   margin-left: 1rem;
+  color: rgb(255, 255, 255);
+} */
+.information .info-box {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: center; /* Center horizontally within the .info-box */
+  text-align: center;
+  margin-left: 0; /* Reset the left margin for center alignment */
+}
+
+.information .info-box .bx {
+  font-size: 22px;
+}
+
+.information .info-box span {
+  font-weight: 400;
+  margin-left: 0; /* Reset the left margin for center alignment */
   color: rgb(255, 255, 255);
 }
 

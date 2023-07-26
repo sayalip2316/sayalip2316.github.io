@@ -121,6 +121,19 @@ nav.shadow {
   margin-bottom: 1.4rem;
   margin-left: 35%;
 }
+#dark-mode-toggle{
+  background-color: white;
+  border: 2px solid white;
+}
+#dark-mode-toggle i{
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color:black;
+}
+#dark-mode-toggle i:hover{
+  color: var(--hover);
+}
 /* Media query for responsive navbar */
 @media screen and (max-width: 768px) {
   .navbar {
