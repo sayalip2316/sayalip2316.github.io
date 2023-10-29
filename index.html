@@ -7,8 +7,7 @@
     <title>Sayali || Full Stack Developer</title>
     <!-- Link To CSS -->
    <!-- Link To CSS -->
-    <link rel="stylesheet" href="./css/dark.style.css" id="dark-mode-style">
-    <link rel="stylesheet" href="./css/bright.style.css" id="theme-style" disabled>
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- Box Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -23,7 +22,7 @@
     <navbar id="nav-menu">
         <a href="#" class="logo">S<span id="while">ayali !</span></a>
  
-        <div class="bx bx-menu" id="menu-icon">
+        <div class="menu-toggle" id="menu-icon">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -36,11 +35,6 @@
             <li><a href="#projects" class="nav-link projects">Projects</a></li>
             <li><a href="#contact" class="nav-link contact">Contact</a></li>
             <li><a class="nav-link resume" id="resume-button-1" href="./Sayali-Jadhav-Resume (2).pdf" onclick="openResume()" download>Resume <span id="resume1"><i class="bx bx-download"></i></span></a></li>
-            <li>
-                <button id="dark-mode-toggle" onclick="toggleDarkMode()">
-                    <i class="bx bx-moon">Bright Mode</i>
-                </button>
-            </li>
         </ul>
     </navbar>
     <!-- Home -->
@@ -54,7 +48,7 @@
         <div class="home-text">
             <span>Hello, I'm</span>
             <h1 id="user-detail-name"><span id="sayali">Sayali</span> Jadhav</h1>
-            <h2>Full Stack Web Developer</h2>
+            <h2 class="animated-text">A Full Stack Web Developer</h2>
             <p>Enthusiastic web developer with 1500+ hours of coding experience in HTML, CSS, and various backend technologies. Problem-solving mindset and collaborative spirit. Eager to leverage skills and experience to build world-class solutions and achieve organizational goals.</p>
             <!-- <a href="#contact" class="btn">Contact Me</a> -->
         </div>
@@ -159,10 +153,11 @@
         <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sayalip2316" alt="">
         <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=sayalip2316" alt="">
        </div><br>
-        <div class="react-activity-calendar">
+        <div class="react-activity-calendar" id="calendar">
             <!-- Loading stuff -->
             <!-- Loading the data just for you. -->
-        </div>
+            <img src="https://ghchart.rshah.org/sayalip2316" alt="Sayali's Github Calender">
+        </div><br>
     </section>
 
 
@@ -255,24 +250,7 @@
                 </div>
               </div>
               
-              <!-- <div class="project-card">
-                <div class="project-details">
-                  <h2 class="project-title">American Eagle Clone</h2>
-                  <img src="./images/Project3.png" alt="Project 3">
-                  <div class="project-tech-stack">
-                    <img src="./images/html-icon1.png" alt="HTML">
-                    <img src="./images/css-icon1.png" alt="CSS">
-                    <img src="./images/js-icon.png" alt="JS">
-                </div>
-                  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
-                  <div class="links">
-                    <a class="project-github-link" href="https://github.com/Dharamveer9457/standing-gun-8725" target="_blank">
-                      <i class="bx bxl-github"></i>GitHub</a>
-                    <a class="project-deployed-link" href="https://standing-gun-8725.netlify.app/" target="_blank">
-                      <i class='bx bx-link-external'></i>Deployed</a>
-                  </div>
-                </div>
-              </div> -->
+            
           </div>
           
           
@@ -284,28 +262,32 @@
             <h2>Contact</h2>
             <!-- <span>Connect With Us</span> -->
         </div>
-        <div class="contact-form">
-            <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="contact-button">Submit</button>
-            </form>
-            <span id="msg"></span>
-        </div>
+            <div class="contact-form">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="contact-button">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+       
+        
     </section>
-    <!-- <input type="button" value="Send" class="contact-button"> -->
-    <!-- Footer -->
-    <!-- <div class="footer">
-        <h2>Coding Home</h2>
+
+    <div class="footer">
+        <h2>Connect with me</h2>
         <div class="footer-social">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.linkedin.com/in/sayali-jadhav-13b84025b/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/sayalip2316" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/sayalijadhav45/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><i class='bx bxs-envelope'></i></a>
         </div>
- 
-    </div> -->
+    </div>
+   
+
+   
+
 
     <!-- Copyright -->
     <div class="copyright">
@@ -320,17 +302,7 @@
     
    
 <script>
-    GitHubCalendar(".react-activity-calendar", "sayalip2316");
-
-// or enable responsive functionality:
-GitHubCalendar(".react-activity-calendar", "sayalip2316", { responsive: true });
-
-// Use a proxy
-GitHubCalendar(".react-activity-calendar", "sayalip2316", {
-   proxy (username) {
-     return fetch(`https://your-proxy.com/github?user=${username}`)
-   }
-}).then(r => r.text())
+   
 
 function openResume(){
     window.open("Sayali-Jadhav-Resume (2).pdf", "_blank")
