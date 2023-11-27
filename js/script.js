@@ -28,31 +28,31 @@
 //          document.body.classList.add('active');
 //      }
 //  }
-document.getElementById("menu-icon").addEventListener("click", function () {
-    this.classList.toggle("active");
-});
+// document.getElementById("menu-icon").addEventListener("click", function () {
+//     this.classList.toggle("active");
+// });
 
- function toggleDarkMode() {
-    const darkModeStyle = document.getElementById('dark-mode-style');
-    const themeStyle = document.getElementById('theme-style');
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
+//  function toggleDarkMode() {
+//     const darkModeStyle = document.getElementById('dark-mode-style');
+//     const themeStyle = document.getElementById('theme-style');
+//     const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-    if (darkModeStyle.disabled) {
-        darkModeStyle.disabled = false;
-        themeStyle.disabled = true;
-        darkModeToggle.innerHTML = '<i class="bx bx-sun"></i> Bright Mode';
-    } else {
-        darkModeStyle.disabled = true;
-        themeStyle.disabled = false;
-        darkModeToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
-    }
-}
+//     if (darkModeStyle.disabled) {
+//         darkModeStyle.disabled = false;
+//         themeStyle.disabled = true;
+//         darkModeToggle.innerHTML = '<i class="bx bx-sun"></i> Bright Mode';
+//     } else {
+//         darkModeStyle.disabled = true;
+//         themeStyle.disabled = false;
+//         darkModeToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
+//     }
+// }
 
  
-Cypress.on('uncaught:exception', (err, runnable) => {
- // returning false here prevents Cypress from failing the test
- return false
-})
+// Cypress.on('uncaught:exception', (err, runnable) => {
+//  // returning false here prevents Cypress from failing the test
+//  return false
+// })
 
 
 
